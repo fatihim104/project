@@ -1,0 +1,46 @@
+ body { 
+   color: white;
+   background: linear-gradient(to left, rgba(161, 241, 161, 0.1),
+   rgba(148, 221, 148, 0.5)), url(./Morsach\ bckgrnd.jpg);
+   background-size: cover;
+      
+   }
+ 
+ #title{
+   text-align: center;
+   color: rgba(255, 255, 255);
+
+   padding: 50px 100px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*
+
+html { 
+   background: url(Morsach\ bckgrnd.jpg) no-repeat center fixed; 
+   background-size: cover;
+ }
+ 
+body{
+   background-color: rgba(243, 152, 92, 0.438);
+     
+}
+
+header{
+   
+
+   
+   background-position: left;
+   background-size:contain;
+   
+   background-repeat: no-repeat;
+}
+
+
+
+/**
+background-image: ;
+    background-repeat: ;
+    background-position: ;
+    background-attachment: fixed;
+*/

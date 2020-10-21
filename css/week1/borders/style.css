@@ -1,0 +1,49 @@
+div{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-width:5px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+.solid{
+    border-style: solid;
+    border-color: red;
+    background-color: midnightblue;
+    border-radius: 10px;
+}
+
+.dotted{
+    border-style: dotted;
+    border-color: red;
+    background-origin: padding-box;
+    background-color: midnightblue;
+    border-radius: 100px;
+}
+
+.dashed{
+    border-style: dashed;
+    border-color: red;
+    background-color: midnightblue;
+    border-radius: 50%;
+}
+
+.double {
+    border-style: double;
+    border-color: red;
+    background-color: midnightblue;
+}
+
+.groove {
+    border-style: groove;
+    border-color:red ;
+    background-color: midnightblue;
+}
+
+.ridge {
+    border-style: ridge;
+    border-color:red ;
+    background-color: midnightblue;
+}

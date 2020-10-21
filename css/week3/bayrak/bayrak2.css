@@ -1,0 +1,29 @@
+#main-container{
+    height: 100vh;
+    display: flex;   
+}
+.container-grup{
+    margin: auto;
+    background-color: red;
+    width: 320px;
+    height: 320px;
+    display: flex;
+}
+.horizental{
+    margin: auto;
+    background-color: white;
+    height: 60px;
+    width: 200px;
+}
+.vertical{
+    position: absolute;
+    align-self: center;
+    margin-left: 120px;
+    background-color: white;
+    width: 60px;
+    height: 200px;
+}
+
+
+
+

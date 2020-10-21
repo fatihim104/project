@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    height: 100vh;
+}
+#main-container{
+    margin: auto;
+    padding: 60px;
+    background-color:red;   
+}
+.container-grup{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.vertical{
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 60px;
+    height: 200px;
+}
+.horizental{
+    position: absolute;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    height: 60px;
+    width: 200px;
+}
+
+
+

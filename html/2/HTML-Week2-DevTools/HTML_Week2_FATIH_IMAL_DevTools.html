@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dom - Devtools</title>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>DevTools`u Acma ve Üzerinde Degisiklik Yapma</h1>
+                <p>
+                    Chrome ya da diger Browserlar ile bir HTML sayfasindaki DOM agacinin yapisini
+                    ve elementlerini inceleyebilir ve üzerinde degisiklikler yapabiliriz.
+                </p>
+            </header>
+            <article>
+                <section>
+                    <h2>DevTools´u Görüntüleme</h2>
+                    <ol>
+                        <li>Sayfa üzerinde detaylarini gormek istedigimiz kismin uzerinde sag tiklayarak cikan menüden
+                            <b>incele</b>yi tiklayarak.
+                            <br><br>
+                            <img width="400" src="./inspect.png" alt="incele resim">
+                            <br><br>
+                        </li>
+                        <li>Browserin arama satirinin yanindaki dikey ... menü cubugunu tiklayip daha sonra
+                            <b>diger araclar</b>a tiklayip buradan cikan menüden de <b>gelistirici araclar</b>i
+                            tiklayarak.
+                            <br><br>
+                            <img width="600" src="./devTools-menü.png" alt="Menü-DevTools">
+                            <br><br>
+                        </li>
+                        <li>
+                            Kisa yol tuslari ile: <b>ctrl + shift + I </b> ya da <b>F12</b> tusu ile
+                            <br><br>
+                            <img width="400" src="./Kisa-yol.png" alt="kisa resim">
+                            <br><br>
+                        </li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>DevTools´da Elementleri Secme</h2>
+                    <ol>
+                        <li>
+                            Acilan DevTools sayfasinda sol üstte bulunan <b>inspect butonunu</b>  tiklayip sectikten sonra sayfa
+                            üzerinde istedigimiz bölüme tiklayabiliriz.Boylece DevTools üzerinde sectigimiz bölüm isaretlenir.
+                            <br><br>
+                            <img width="600" src="./inspect-icon.png" alt="inspect-icon">
+                            <br><br>
+                        </li>
+                        <li>
+                            DevTools sayfasinda HTML kodlarinin yer aldigi  <b>Element</b>sler menüsünden imlec ile gezindigimizde
+                            sayfa üzerinde koda denk gelen alan renklenir ve <br> islem yapmak istedigimiz 
+                            koda tikladigimizda ilgili alan secilmis olur.
+                            <br><br>
+                            <img width="600" src="./secili-element.png" alt="element">
+                            <br><br>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>DevTools Üzerinde Islemler ve Sayfayi Düzenleme</h2>
+                    <h3>Farkli Cihazlarda Görünüm</h3>
+                        <p>DevTools´un sol üst kösesinde inspect butonunun yanindaki cep telefonu ve tablet ikonuna
+                            tiklayarak sayfanin ve sayfadaki resim, sekil vs bolümlerin farkli boyutlardaki cihazlarda 
+                            nasil göründügünü görebiliriz. Responsive tasarimlari bu sekilde kontrol edebiliriz.
+                        </p>
+                        <img width="600" src="./responsive.png" alt="responsive">
+                            <br><br>
+                    <h3>Ayar ve Düzenleme</h3>
+                    <p>DevTools; sayfayi hazirlarken kullandigimiz IDE programlarinin yaptigi bir cok görevi yerine getirebilir.
+                        DevTools´un bir avantaji da yaptigimiz degisikliklerin hemen sayfaya yansimasidir. Böylece yaptigimiz islemleri
+                        hizlica gözden gecirebilir ve ince ayarlari DevToolsdan görerek yapabiliriz. 
+                        <br><br>
+                        Ancak yaptigimiz degisiklikler sayfaya kaydedilmez. O anda sayfaya yansir. Sayfa yenilendiginde kayitli dosyadaki 
+                        veriler tekrar yerini alir. Kalici olmasini istedigimiz degisiklikleri kopyalayip IDE programlarinda kaydetmeliyiz.
+                    </p>
+                    <p>
+                        Yapabilecegimiz diger islemleri soyle siralayabiliriz;
+                        <ul>
+                            <li>
+                                Yeni Taglar ekleme ve silme.
+                            </li>
+                            <li>
+                                Sectigimiz alanlari gizleme.
+                            </li>
+                            <li>
+                                Atribütleri degistirme, silme ve yeni attribütler ekleme.
+                            </li>
+                            <li>
+                                Css alanina giren konularda degisiklikler ve düzenlemeler yapma.
+                            </li>
+                            <li>
+                                Js alanina giren konularda degisiklikler ve düzenlemeler yapma.
+                            </li>
+                        </ul>
+                    </p>
+                </section>
+            </article>
+        </main>
+    </body>
+
+</html>

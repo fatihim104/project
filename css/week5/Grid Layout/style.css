@@ -1,0 +1,168 @@
+/******************
+General Style
+*******************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: #696969 !important;
+    font-size: 12px;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.lg-coders, .info, footer, .right, .left{
+    background-color: #f8f8f8;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 5px;
+}
+
+/* Sadece Grid Layoutlama kullanilmistir. */
+/* Main ---> Grid-container (3*rows, 4 Columns) */
+
+main{
+    width: 70vw;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'left lg-coders info right' 
+        'left footer footer right';
+}
+
+/* headera container grid verildi.  */
+
+header{
+    grid-area: header;
+    display: grid;
+    padding: 10px 0;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(202, 202, 202);
+    border-left:none;
+}
+
+.lg-coders{
+    grid-area: lg-coders;
+}
+
+.info{
+    grid-area: info;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+footer{
+    grid-area: footer;
+    border-top: 1px solid rgb(202, 202, 202);
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-left: 100px;
+}
+
+.left{
+    grid-area:left ; 
+}
+
+.right{
+    grid-area: right;
+    border-right:1px solid rgb(202, 202, 202);
+}
+
+/* info-top-line divi grid-container */
+
+.info-top-line{
+    display: grid;
+    grid-template-columns: 10vw 9vw 5.5vw;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+/* info-middle-line divi grid-container*/
+
+.info-middle-line{
+    display: grid;
+    grid-template-columns: repeat(3, 8.5vw);
+    margin-bottom: 15px;
+}
+
+/* components */
+
+.logo-instagram>img{
+    height: 5vh;
+}
+
+nav ul li:last-child img{
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.lg-coders>img{
+    width: 9vw;
+    border-radius: 50%;
+}
+
+.nav-img{
+    height: 3.5vh;
+    margin-left: 8px;
+}
+
+input, button{
+    text-align: center;
+    background-color: #f8f8f8;
+    font-weight: bold;
+    border:1px solid rgb(201, 201, 201);
+    padding: 5px 0;
+}
+
+.info-bottom-line a{
+    text-decoration: none;
+    color: rgb(22, 22, 139);
+    font-weight: bold;
+}
+
+footer li a{
+    text-decoration: none;    
+    color: grey;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 30px;
+    padding-top: 15px;
+}
+
+.footer-icons{
+    height: 2vh;  
+}
+
+footer ul li a:focus{
+    font-weight: bolder;
+    color: rgb(34, 34, 34);
+    border-top: 1px solid rgb(34, 34, 34);
+}
+
+/*animation*/
+
+.info-top-line .nav-img{
+    animation-name: movement;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+}
+
+@keyframes movement {
+    50% {transform: rotateZ(360deg)}
+    100% {transform: rotateZ(-360deg)}
+}
