@@ -1,0 +1,335 @@
+/**************
+General Styling 
+***************/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/********************
+Typology
+********************/
+
+html {
+    font-size: 8px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/********************
+LAYIOUT
+********************/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    min-height: 95vh;
+    min-width: 70vw;
+    background-image: linear-gradient(100deg, rgba(250, 250, 250, 0.884) 20%, rgb(248, 248, 248) 20%);
+}
+
+/*********************
+Out Circles Container
+**********************/
+
+.left-circle {
+    float: left;
+    position: relative;
+    top: 40vh;
+    transform: translateX(-40%);
+    height: 36.1vh;
+    width: 17.9vw;
+    background-color: rgba(31, 148, 243, 0.6);
+    border-radius: 50%;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%);
+}
+
+.top-left-circle {
+    float: left;
+    position: relative;
+    top: 3vh;
+    left: -8vw;
+    height: 12vh;
+    width: 6vw;
+    background-color: rgba(31, 148, 243, 0.3);
+    border-radius: 50%;
+}
+
+.top-right-circle {
+    float: right;
+    position: relative;
+    right: 1.2vw;
+    transform: translateY(-10%);
+    height: 22.3vh;
+    width: 11.06vw;
+    background-color: rgba(31, 148, 243, 0.7);
+    border-radius: 50%;
+    clip-path: polygon(0 10%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.bottom-right-circle {
+    float: right;
+    position: relative;
+    top: 64vh;
+    left: 15.5vw;
+    height: 36.1vh;
+    width: 17.9vw;
+    background-color: rgba(31, 148, 243, 0.3);
+    border-radius: 50%;
+    clip-path: polygon(0 0, 75% 0, 75% 85%, 0 85%);
+}
+
+/**********************************************************
+Main Container(Layoutlama icin olusturulmustur-transparent)
+***********************************************************/
+
+#main-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    min-width: 70vw;
+    background-color: transparent;
+}
+
+/* Icerikler content container icerisindedir.  */
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    min-width: 22vw;
+    background-color: rgb(252, 252, 252);
+    box-shadow: -5px 1px 50px rgba(173, 173, 173, 0.733);
+}
+
+/************************************************
+Header bölümü nav ve ic alandaki cemberleri icerir.
+*************************************************/
+
+header {
+    min-height: 24vh;
+    min-width: 22vw;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(31, 148, 243, 1), rgba(31, 148, 243, 0.6));
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: #f1f1f1;
+}
+
+#inner-circles {
+    display: flex;
+    min-height: 24vh;
+    min-width: 22vw;
+    position: relative;
+}
+
+.in-left-circle {
+    position: absolute;
+    top: 7vh;
+    left: 0.5vw;
+    height: 16vh;
+    width: 8vw;
+    border-radius: 50%;
+    background-color: rgba(248, 248, 248, 0.150);
+}
+
+.in-middle-circle {
+    position: absolute;
+    bottom: 14vh;
+    left: 12vw;
+    height: 2vh;
+    width: 1vw;
+    border-radius: 50%;
+    background-color: rgba(248, 248, 248, 0.150);
+}
+
+.in-right-circle {
+    position: absolute;
+    left: 19vw;
+    top: 1vh;
+    height: 8vh;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: rgba(248, 248, 248, 0.150);
+}
+
+/**********************************
+(profil-info-social) classi verilen Article bölümü user photo sosyal medya baglantilari
+ve kisa aciklama iceren kisimdir.
+***********************************/
+
+article.profil-info-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 19vw;
+    min-height: 22vh;
+    transform: translateY(-40%);
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: rgba(189, 189, 189, 0.69);
+    text-shadow: 1px 1px 1px rgb(179, 179, 179);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(253, 253, 253);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgb(218, 218, 218);
+}
+
+figure.profil-photo-icon {
+    display: flex;
+    height: 8vh;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateY(-60%);
+}
+
+img.user-photo {
+    width: 4vw;
+    height: 9vh;
+    border-radius: 50%;
+}
+
+img.photo-machine-icon {
+    align-self: flex-end;
+    transform: translateX(-100%);
+    width: 1.1vw;
+    height: 2.2vh;
+    border-radius: 50%;
+}
+
+article>section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-20%);
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media-icon {
+    margin: 5px 3px;
+}
+
+.social-media-icon img {
+    width: 2vw;
+    height: 4vh;
+}
+
+/**********************
+Account Settings Bölümü
+***********************/
+
+.settings-box {
+    position: relative;
+    bottom: 30px;
+    width: 19vw;
+}
+
+#settings-buttons-infos {
+    background-color: rgb(253, 253, 253);
+    color: rgb(184, 184, 184);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-shadow: 2px 1px 1px rgb(233, 233, 233);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgb(218, 218, 218);
+}
+
+.setting-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.setting-images {
+    width: 2vw;
+    height: 4vh;
+}
+
+.setting-links div {
+    display: flex;
+    align-items: center;
+}
+
+footer>div {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(253, 253, 253);
+    width: 22vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px -2px 5px rgba(233, 230, 230, 0.678);
+}
+
+/***************************
+Components-Son Düzenlemeler
+****************************/
+
+nav i {
+    color: white;
+}
+
+h1 {
+    font-size: 1.3rem;
+    text-shadow: none;
+    color: rgb(148, 148, 148);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: rgb(168, 168, 168);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-name-info{
+    margin-bottom: 5px;
+}
+
+section.extra-info {
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+Footer h2 {
+    margin-left: 25px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.setting-links a {
+    color: rgb(184, 184, 184);
+}
+
+span {
+    padding-left: 10px;
+}
+
+footer>div>a {
+    color: rgb(184, 184, 184);
+}
