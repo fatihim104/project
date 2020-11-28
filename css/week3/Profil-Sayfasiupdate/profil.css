@@ -1,0 +1,203 @@
+/* General Styling & Layout*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(70deg, #6196c2 10%,
+    #6b67377a 43%, #07b6ea4f 100%,#58a6e6b4 20%,
+    #a2c2ddd5 10%), url(./Img/time-371226_1920.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    /* background-position: center; */
+}
+
+main{
+    max-width: 70vw;
+    margin: auto;
+}
+#header-container{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.header-content{
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    padding:50px;   
+}
+
+.header-content+p{
+    flex-grow: 4;
+}
+#fig-pforil{
+    flex-grow: 1;
+}
+
+#part-one, #part-two, #part-three, #part-four, #part-fife {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#part-fife{
+    margin-bottom: 100px;
+}
+
+/* Typology */
+
+h1{
+    color:rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 10px  100px;
+}
+
+#profil-img{
+    width: 200px;
+    border-radius: 10px;
+    opacity: .9;
+    margin-left: 20px;
+    margin-bottom:20px;
+    margin-top: 40px;
+}
+
+p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    line-height: 2;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+    text-align: justify;
+    text-indent: 50px;
+    text-shadow: 0px 1px rgb(2, 2, 2); 
+}
+
+p::first-letter{
+    font-size: 40px;
+    background-color: rgba(194, 124, 19, 0.644);
+}
+
+p::first-line{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p>span>a{
+    text-decoration: none;
+    color: red;
+}
+
+p>span>a:hover{
+    background-color: #333;
+    color: rgb(255, 255, 255);
+}
+
+/* table styles */
+
+table{
+    line-height: 50px;
+    background-color: rgba(226, 224, 217, 0.3);
+    border-radius: 10px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: -10px -10px 30px 5px black;
+}
+
+caption{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+td:first-child{
+    padding-left: 10px;
+}
+
+th{
+    background-color: rgb(8, 7, 49, .6);
+    padding: 5px 20px;
+    line-height: 2;
+}
+
+th:first-child{
+    border-top-left-radius: 10px;
+}
+
+th:last-child{
+    border-top-right-radius: 10px;
+}
+
+tbody tr{
+    border-top: 1px solid rgba(71, 69, 69, 0.548);
+    padding-left: 10px;
+}
+
+td:hover,th:hover{
+    color: maroon;
+    font-weight: bolder;
+    text-shadow:5px 5px 5px snow;
+    cursor: pointer;
+}
+
+#part-one tr:nth-child(odd), #part-three tr:nth-child(odd),
+#part-fife tr:nth-child(odd) {
+    background-color: skyblue;
+}
+
+#part-one tbody tr:hover, #part-three tbody tr:hover,
+#part-fife tbody tr:hover{
+    background-color: rgb(58, 53, 53) ;
+    box-shadow: 20px 20px 20px 10px lightcyan;
+}
+
+#part-two tbody tr:nth-child(even), #part-four tr:nth-child(even) {
+    background-color:rgb(255, 80, 109);
+}
+
+#part-two tbody td:hover, #part-four tbody td:hover {
+    background-color: rgb(130, 255, 46) ;
+    box-shadow:20px 20px 20px 10px lightcyan;
+}
+
+/*Figure style*/
+
+figure:hover{
+    transform: scale(1.4, 1.4);
+    box-shadow: 10px 10px 10px 5px lightcyan;   
+}
+
+figure{
+    /* position: relative; */
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;   
+}
+
+@keyframes movement {
+    0%  {top:0px;}
+    15% {left:4px; top:15px;}
+    30% {left:8px; transform: rotateZ(14deg); border-radius: 50%;}
+    40% {left:4px; top:0px;}  
+    55% {left:0px; top:-15px;}
+    70% {left:-4px; transform: rotateZ(-10deg); border-radius:50%}
+    85% {left:-2px; top:-15px;}
+    100%{left:0px; top:0px}
+} 
+
+
+
+
+

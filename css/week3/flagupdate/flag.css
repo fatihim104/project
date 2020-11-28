@@ -1,0 +1,51 @@
+/*main(container) tagiyle sayfanin tamamina gore section tagi ortalanmistir-*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    background-color: red;
+    width: 320px;
+    height: 320px;
+    box-shadow: 20px 20px 30px 20px #860b07e5;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    animation-name: movement;
+    animation-duration: 3.6s;
+    animation-iteration-count: infinite;
+}
+
+/*animation*/
+@keyframes movement {
+    0%  {top:0px;}
+    15% {left:4px; top:15px;}
+    30% {left:8px; transform: rotateZ(14deg); border-top-right-radius: 30%;}
+    40% {left:4px; top:0px;}  
+    55% {left:0px; top:-15px;}
+    70% {left:-4px; transform: rotateZ(-10deg); border-bottom-right-radius:10%}
+    85% {left:-2px; top:-15px;}
+    100%{left:0px; top:0px}
+}
+
+.horizantal{
+    background-color: white;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical{
+    background-color: white;
+    width: 60px;
+    height: 200px;
+}
+  /* tüm elementler centering yapilmisir*/
+
+
