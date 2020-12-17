@@ -43,17 +43,3 @@ for (let index = 0; index < hayvanCinsleriSayisi.length; index++) {
 }
 
 alert(`toplamda ${toplamBacak} bacak var.`);
-
-
-
-// let hayvan = prompt("Ciftlikteki hayvanlari yaz?");
-// hayvanListesi.push(hayvan);
-// let hayvanListesi = [inek,domuz,tavuk,inek,koyun,koyun];
-// let toplamBacak=0;
-
-// for (let sayac = 0; sayac < hayvanListesi.length; sayac++) {
-//     sonrakiHayvan = parseInt(hayvanListesi[sayac]);
-
-//     toplamBacak +=  sonrakiHayvan; 
-// }
-// alert(`Toplam Bacak Sayisi :${toplamBacak}`);
