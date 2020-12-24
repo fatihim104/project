@@ -22,11 +22,8 @@ const notes = [
     ["Monika", 49, 42, 16, 62]
 ];
 
-//Dersler index sirasina göre isimlendirildi.
-const MATH = 1;
-const GERM = 2;
-const ENG = 3;
-const GEO = 4;
+//Dersleri index sirasi almasi icin diziye attik.
+let lessons = ["Matematik", "Almanca", "Ingilizce", "Cografya"]
 
 //Sinifin her dersinin ortalamasinin ayri ayri hesaplanmasi 
 // Bu fonksiyon ders ismi girildiginde o dersin notlarini toplar ve ders sayisina bölerek ortalamayi bulur.
@@ -43,10 +40,11 @@ function takeAverage(p_lessonNumber) {
     return avarage;
 }
 
-console.log("Matematik Ortalamasi:" + takeAverage(MATH));
-console.log("Almanca Ortalamasi:" + takeAverage(GERM));
-console.log("Ingilizce Ortalamasi:" + takeAverage(ENG));
-console.log("Cografya Ortalamasi:" + takeAverage(GEO) + "\n");
+//consola 4 dersi sirayla yazdirma döngüsü
+for (let i = 0; i < lessons.length; i++) {
+    nextLesson = lessons[i]
+    console.log(` ${lessons[i]} dersi Ortalamasi: ${takeAverage(i+1)}`);
+}
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -65,7 +63,7 @@ for (let index = 0; index < notes.length; index++) {
         }
     }
 }
-console.log("70 puan üstü alanlar:" + over70List.join() + "\n");
+console.log("\n" + "70 puan üstü alanlar:" + over70List.join());
 
 //fonksiyon kullanarak cözüm
 //parametre olarak ders indexi verilen fonksiyonda secilen dersden 70"in üzerinde olan notlara göre secim yapip o nota sahip ögrenciler listeleniyor. Asagidaki for döngüsünde de fonksiyonun parametresi döndürülerek tüm ögrencilere bakilmasi saglaniyor.
@@ -104,10 +102,11 @@ function compare_Avarage(p_lessonName) {
     return overAvarageList;
 }
 
-console.log("Matematik dersi ortalama üstünde olan ögrenciler :" + compare_Avarage(MATH).join());
-console.log("Almanca dersi ortalama üstünde olan ögrenciler :" + compare_Avarage(GERM).join());
-console.log("Ingilizce dersi ortalama üstünde olan ögrenciler :" + compare_Avarage(ENG).join());
-console.log("Cografya dersi ortalama üstünde olan ögrenciler :" + compare_Avarage(GEO).join() + "\n");
+//consola 4 dersi sirayla yazdirma döngüsü
+for (let i = 0; i < lessons.length; i++) {
+    nextLesson = lessons[i]
+    console.log(` ${lessons[i]} dersi ortalama üstünde olan ögrenciler: ${compare_Avarage(i+1)}`);
+}
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -124,7 +123,7 @@ function get_topScore() {
                 topScore = notes[index][counter];
                 topScorePerson = notes[index][0];
                 topScoreLesson = get_className(counter);
-                result = "Not :" + topScore + "," + "Student :" + topScorePerson + "," + "Top Score Lesson: " + topScoreLesson;
+                result = topScore + " " + "Ögrenci :" + topScorePerson + " " + "Dersin adi:" + topScoreLesson;
             }
         }
     }
@@ -150,7 +149,7 @@ function get_className(index) {
             return "enter correct index"
     }
 }
-console.log("Siniftaki en yüksek ders notu :" + get_topScore() + "\n");
+console.log("\n" + "Siniftaki en yüksek ders notu :" + get_topScore());
 
 //Ortalamaya göre en iyi ders
 function get_goodNot() {
@@ -184,7 +183,6 @@ console.log("Siniftaki ortalamasi en düsük ders :" + get_badNot() + " \n");
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 //Tüm derslerin en iyi ögrencilerini bulmasi 
-
 function bring_LessonNot(p_lessonName) {
     let lessonIndex = p_lessonName;
     let student = "";
@@ -200,14 +198,16 @@ function bring_LessonNot(p_lessonName) {
     for (let index = 0; index < notes.length; index++) {
         for (let innerIndex = 0; innerIndex < notes[index].length; innerIndex++) {
             let nextNot = (notes[index][innerIndex]);
-            if(nextNot == topNotOfLesson ){
+            if (nextNot == topNotOfLesson) {
                 student = notes[index][0];
-            }           
+            }
         }
     }
     return topNotOfLesson + " " + student;
 }
-console.log("Matematik dersi birincisi :" + bring_LessonNot(MATH));
-console.log("Almanca dersi birincisi :" + bring_LessonNot(GERM));
-console.log("Ingilizce dersi birincisi :" + bring_LessonNot(ENG));
-console.log("Cografya dersi birincisi :" + bring_LessonNot(GEO));
+
+//consola 4 dersi sirayla yazdirma döngüsü
+for (let i = 0; i < lessons.length; i++) {
+    nextLesson = lessons[i]
+    console.log(` ${lessons[i]} dersi birincisi: ${bring_LessonNot(i+1)}`);
+}
