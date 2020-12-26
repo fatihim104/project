@@ -19,7 +19,7 @@ let change_Upper = (newWord) => newWord.toUpperCase()
 let remove_Number = (newWord) => newWord.replace(/[0-9]/g, '');
 let reverse_Word = (newWord) => newWord.split("").reverse().join("");
 let add_Word = (newWord) => "KEREMAG_"+ newWord;
-let add_Date = (newWord) => new Date + newWord;
+let add_Date = (newWord) => newWord + "   " + new Date + "\n";
 
 function change_List(pParam){
     let siradakiParca = pParam;
