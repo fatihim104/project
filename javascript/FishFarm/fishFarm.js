@@ -114,7 +114,7 @@ const fishFarm = [{
 1) Stok miktari 500 kg uzerinde olan baliklarin isimleri nelerdir?
 2) Fiyat araligi 9Fr. ile 12 Fr. arasindaki baliklar hangileridir?
 3) Sadece Bern'de ve kis sezonu satilan baliklar hangileridir?
---4) Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
+4) Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
 5) Avrupa Birligi'nden (AB) gelen ve fiyati 10Fr dan dusuk olan baliklari alfabetik siraya gore siralayiniz.
 6) Toplam balik stoku ne kadardir?
 7) En pahali olan balik hangisidir? 
@@ -136,8 +136,8 @@ console.log(`Sadece Bern'de ve kis sezonu satilan baliklar : ${bringWinterBern(f
 //Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
 console.log(`Son kullanma tarihlerine gore baliklar : \n${orderExpirationDate(fishFarm)}`);
 
-//Avrupa Birligi'nden (AB) gelen ve fiyati 10Fr dan dusuk olan baliklari siralayiniz.
-console.log(`(AB)'den gelen ve fiyati 10Fr dan dusuk olan baliklar : ${bringABCountry (fishFarm).join("")} `);
+//Avrupa Birligi'nden (AB) gelen ve fiyati 10Fr dan dusuk olan baliklari alfabetik siraya göre siralayiniz.
+console.log(`(AB)den gelen ve fiyati 10Fr dan dusuk olan baliklar : ${bringABCountry (fishFarm).join("<")} `);
 
 //Toplam balik stoku ne kadardir?
 let totalStok = fishFarm.reduce(function(accumulator, currentValue,) {
@@ -159,6 +159,9 @@ console.log(`Ticino Kantonu toplam balik stogu : ${bringTicinoProductStok(fishFa
 
 // Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan baliklarin ortalama gramajini bulunuz?
 console.log(`Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan baliklarin ortalama gramaji : ${takeAverageWeight(fishFarm)}`);
+
+
+
 
 
 

@@ -22,7 +22,7 @@ function bringWinterBern(pProductList) {
 
 //Son kullanma tarihlerine gore baliklari siralayan fonksiyon.
 function orderExpirationDate(pProductList){
-    fishFarm.forEach( product => product.entryDate = product.entryDate.setDate(product.entryDate.getDate() + product.durationInDays));
+    pProductList.forEach( product => product.entryDate = product.entryDate.setDate(product.entryDate.getDate() + product.durationInDays));
     let sortedDate = fishFarm.sort((a,b) => a.entryDate - b.entryDate)
     let result = sortedDate.map (product => product.fishType + " --->  " + new Date(product.entryDate));
     return result.join("\n");
@@ -32,7 +32,13 @@ function orderExpirationDate(pProductList){
 function bringABCountry(pProductList) {
     let countryABProduct = pProductList.filter(products => (products.originCountry === "Poland" || products.originCountry === "France" || products.originCountry === "Italy" || products.originCountry === "GREECE" || products.originCountry === "Spain") && products.price < 10);
     let productName = countryABProduct.map(productInfos => productInfos.fishType);
-    let ordered = productName.sort();
+    let ordered = productName.sort(function(a,b) {
+        var x = a.type.toLowerCase();
+        var y = b.type.toLowerCase();
+        if (x < y) {return -1;}
+        if (x > y) {return 1;}
+        return 0;
+    } );
     return ordered;
 }
 
