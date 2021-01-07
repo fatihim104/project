@@ -20,21 +20,12 @@ function bringWinterBern(pProductList) {
     return productName;
 }
 
-//Son kullanma tarihlerine gore baliklari siralayiniz.
-//bu fonksiyon son kullanma tarihlerini hesapliyor.
-function calculateExpirationDate(pProductList, pProductIndex) {
-    productEntryDate = pProductList[pProductIndex].entryDate;
-    firstDayOfProduct = productEntryDate.getDate();
-    let exDate = productEntryDate.setDate(firstDayOfProduct + pProductList[pProductIndex].durationInDays);
-    let dateNorm = new Date(exDate);
-    return dateNorm + pProductList[pProductIndex].fishType + "\n";
-}
-//bu fonksiyon hesaplanan tarihleri siraliyor.
-function orderExpirationDate(pProductList) {
-    let result = pProductList.map((list, index) => calculateExpirationDate(pProductList, index));
-    let ordered = result.sort((a, b) => new Date(a) - new Date(b))
-
-    return ordered.join("") + "\n";
+//Son kullanma tarihlerine gore baliklari siralayan fonksiyon.
+function orderExpirationDate(pProductList){
+    fishFarm.forEach( product => product.entryDate = product.entryDate.setDate(product.entryDate.getDate() + product.durationInDays));
+    let sortedDate = fishFarm.sort((a,b) => a.entryDate - b.entryDate)
+    let result = sortedDate.map (product => product.fishType + " --->  " + new Date(product.entryDate));
+    return result.join("\n");
 }
 
 //(AB) ülkelerinden gelen ve fiyati 10Fr dan dusuk olan baliklari getirme fonksiyonu.

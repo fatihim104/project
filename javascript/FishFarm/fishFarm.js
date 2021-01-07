@@ -134,7 +134,7 @@ console.log(`Fiyat araligi 9Fr. ile 12 Fr. arasindaki baliklar : ${bringProperPr
 console.log(`Sadece Bern'de ve kis sezonu satilan baliklar : ${bringWinterBern(fishFarm)}`);
 
 //Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
-console.log( orderExpirationDate(fishFarm));
+console.log(`Son kullanma tarihlerine gore baliklar : \n${orderExpirationDate(fishFarm)}`);
 
 //Avrupa Birligi'nden (AB) gelen ve fiyati 10Fr dan dusuk olan baliklari siralayiniz.
 console.log(`(AB)'den gelen ve fiyati 10Fr dan dusuk olan baliklar : ${bringABCountry (fishFarm).join("")} `);
@@ -159,6 +159,11 @@ console.log(`Ticino Kantonu toplam balik stogu : ${bringTicinoProductStok(fishFa
 
 // Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan baliklarin ortalama gramajini bulunuz?
 console.log(`Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan baliklarin ortalama gramaji : ${takeAverageWeight(fishFarm)}`);
+
+
+
+
+
 
 
 
