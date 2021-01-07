@@ -33,8 +33,8 @@ function bringABCountry(pProductList) {
     let countryABProduct = pProductList.filter(products => (products.originCountry === "Poland" || products.originCountry === "France" || products.originCountry === "Italy" || products.originCountry === "GREECE" || products.originCountry === "Spain") && products.price < 10);
     let productName = countryABProduct.map(productInfos => productInfos.fishType);
     let ordered = productName.sort(function(a,b) {
-        var x = a.type.toLowerCase();
-        var y = b.type.toLowerCase();
+        var x = a.toLowerCase();
+        var y = b.toLowerCase();
         if (x < y) {return -1;}
         if (x > y) {return 1;}
         return 0;
