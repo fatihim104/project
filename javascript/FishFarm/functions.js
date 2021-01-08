@@ -54,8 +54,8 @@ function bringLongTermProductList(pProductList) {
     durationDayList = pProductList.map(product => product.durationInDays)
     maxDurationDay = pProductList.reduce((a, b) => Math.max.apply(null, durationDayList));
     longTermFish = pProductList.filter(product => product.durationInDays === maxDurationDay)
-        .map(product  => product.fishType + ":" + product.originCountry + "\n");
-    return longTermFish.join("");
+        .map(product  => product.fishType + ":" + product.originCountry );
+    return longTermFish.join("\n");
 }
 
 // Kis ve sonbahar sezonu icin swiss romande region'da satilan baliklarin ortalama fiyatini bulan fonksiyon.

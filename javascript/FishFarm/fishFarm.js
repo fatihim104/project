@@ -172,5 +172,3 @@ console.log(`Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan balik
 
 
 
-
-
