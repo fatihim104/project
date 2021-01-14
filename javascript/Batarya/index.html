@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batarya Simulasyonu</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <main>
+        <section id="pil">
+            <div id="pil-baslik"></div>
+            <div id="pil-gövde">
+                <div id="gösterge-full" class="gövde-bölümü"></div>
+                <div id="gösterge-iki-parca" class="gövde-bölümü"></div>
+                <div id="gösterge-tek-parca" class="gövde-bölümü"></div>
+            </div>
+            <div id="göstge-degeri"><span>0</span></div>
+        </section>
+
+        <section id="degistirmeButonlari">
+            <button id="artir" class="button-sml">
+                <div class="horizantal">
+                    <div class="vertical"></div>
+                </div>
+            </button>
+            <button id="eksilt" class="button-sml horizantal"></button>
+        </section>
+    </main>
+    
+    <script src="./src/functions.js"></script>
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
