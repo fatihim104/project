@@ -1,0 +1,25 @@
+/* layout */
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+/* sepet tablosu */
+#basket-table{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Ürün resimleri */
+img{
+    width: 25px;
+    height: 40px;
+}
+
+/* Sepet resmi */
+figure img{
+    margin: 50px auto;
+    width: 200px;
+}
