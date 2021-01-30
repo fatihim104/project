@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Digtal Clock</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main-container" class="m-4">
+    <h1 class="text-center">World Digital Clock</h1>
+    <section id="clock-button">
+
+      <div id="clock"></div>
+
+      <div class="dropdown">
+        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          City
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a id="panama" class="dropdown-item" href="#">Panama</a></li>
+          <li><a id="dubai" class="dropdown-item" href="#">Dubai</a></li>
+          <li><a id="pago" class="dropdown-item" href="#">Pago Pago</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="./src/function.js"></script>
+  <script src="./src/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+
+</html>

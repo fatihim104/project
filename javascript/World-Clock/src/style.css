@@ -1,0 +1,22 @@
+main{
+    height: 100vh;       
+}
+h1{
+    margin: auto;
+}
+
+section{
+    margin:30vh auto;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#clock{
+    height: 20vh;
+    width: 30vw;
+    border: 1px solid #000;
+}
+
+p{
+    display:inline;
+}
