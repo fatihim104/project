@@ -27,7 +27,7 @@ function removeClickedEvent(pEvent){
  * bu fonksiyon kendisine array olarak gönderilen degerlerin bos olmamasini ve yas kisminin sayi olmasini kontrol eder.
  * @param {array} pNewStudent 
  */
-function validateStudent(pNewStudent){
+function validatePerson(pNewStudent){
     if(pNewStudent[0] === ""
         || pNewStudent[1] === ""
         || pNewStudent[2] === ""){
@@ -38,6 +38,10 @@ function validateStudent(pNewStudent){
         alert("Yas degeri bir sayi olmali!");
         throw new Error("Yas deger bir sayi olmali");
     }
+    if(!(isNaN(pNewStudent[0])) || !(isNaN(pNewStudent[1]))){
+        alert("isim veya soyisim sayi olmamali!");
+        throw new Error("isim veya soyisim  sayi olmamali!");
+    }  
 }
 
 /**
