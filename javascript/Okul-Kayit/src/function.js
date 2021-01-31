@@ -6,7 +6,8 @@ function addClickedEvent(pEvent){
     const age = document.querySelector("#input-age").value;    
     if (pEvent.target.id === "button-add") {
         newStudent = [name, surname, age]
-        addToStudentList(newStudent)
+        validateStudent(newStudent);
+        addToStudentList(newStudent);
         addNewRowtoDisplayTable(studentList);
         getTotalNumber();        
         refreshForm();
@@ -19,6 +20,23 @@ function removeClickedEvent(pEvent){
         removeFromTable(pEvent);
         deleteFromStudentList(getRowIndex(pEvent));
         getTotalNumber();
+    }
+}
+
+/**
+ * bu fonksiyon kendisine array olarak gönderilen degerlerin bos olmamasini ve yas kisminin sayi olmasini kontrol eder.
+ * @param {array} pNewStudent 
+ */
+function validateStudent(pNewStudent){
+    if(pNewStudent[0] === ""
+        || pNewStudent[1] === ""
+        || pNewStudent[2] === ""){
+            alert("Girilen degerler eksik!");
+            throw new Error("Girilen degerler eksik!");
+        }
+    if(isNaN(pNewStudent[2])){
+        alert("Yas degeri bir sayi olmali!");
+        throw new Error("Yas deger bir sayi olmali");
     }
 }
 
