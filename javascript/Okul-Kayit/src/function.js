@@ -38,10 +38,18 @@ function validatePerson(pNewStudent){
         alert("Yas degeri bir sayi olmali!");
         throw new Error("Yas deger bir sayi olmali");
     }
-    if(!(isNaN(pNewStudent[0])) || !(isNaN(pNewStudent[1]))){
-        alert("isim veya soyisim sayi olmamali!");
-        throw new Error("isim veya soyisim  sayi olmamali!");
-    }  
+    if (hasNumber(pNewStudent[0]) || hasNumber(pNewStudent[1])) {
+        alert("isim veya soyad sayi icermemeli!");
+        throw new Error("isim veya soyad sayi icermemeli!");
+    } 
+}
+
+/**
+ * bu fonksiyon kendisine gönderilen string degerin iceriginde sayi olup olmadigini kontrol eder.sayi varsa true degeri dönderir.
+ * @param {string} myString 
+ */
+function hasNumber(myString) {
+    return /\d/.test(myString);
 }
 
 /**
