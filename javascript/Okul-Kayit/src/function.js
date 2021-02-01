@@ -27,13 +27,13 @@ function removeClickedEvent(pEvent){
  * bu fonksiyon kendisine array olarak gönderilen degerlerin bos olmamasini ve yas kisminin sayi olmasini kontrol eder.
  * @param {array} pNewStudent 
  */
-function validatePerson(pNewStudent){
+function validateStudent(pNewStudent){
     if(pNewStudent[0] === ""
         || pNewStudent[1] === ""
         || pNewStudent[2] === ""){
             alert("Girilen degerler eksik!");
             throw new Error("Girilen degerler eksik!");
-        }
+    }
     if(isNaN(pNewStudent[2])){
         alert("Yas degeri bir sayi olmali!");
         throw new Error("Yas deger bir sayi olmali");
