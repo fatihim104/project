@@ -1,0 +1,1 @@
+const wordList = ["baz-la-ma-ci", "hur-da-ci", "o-to-mo-bil", "ka-lem-lik", "is-tan-bul", "bur-sa", "pan-to-lon", "te-le-viz-yon", "ter-mo-si-fon", "fir-ti-na", "öz-gür-lük"];
