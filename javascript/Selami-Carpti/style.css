@@ -1,0 +1,48 @@
+#main-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content:space-around; */
+    
+}
+#user-container{
+    background-color: #ebffc2;
+    width: 30%;
+    height: 100vh;
+    padding: 20px;
+
+}
+
+#player-container{
+    width: 100%; 
+    background-color: cornflowerblue;
+}
+
+#new-user{
+    padding: 3%;
+    margin-bottom: 40px;
+    border-bottom: 5px solid darkred;
+}
+
+#user-score {
+    /* width: 25%; */
+}
+
+#play-section{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 40vw;
+    height: 20vh;
+    background-color: #dba34f;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 100px;
+}
+
+#answer{
+    width: 130px;
+    height: 43px;
+}
